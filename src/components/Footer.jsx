@@ -7,7 +7,7 @@ const Footer = () => {
     const aboutSection = document.getElementById('about-section');
     aboutSection.scrollIntoView({ behavior: 'smooth' });
   }
-  const scrollNavbar=()=>{
+  const scrollHome=()=>{
     const homeSection=document.getElementById('home-section')
     homeSection.scrollIntoView({behavior:"smooth"})
   }
@@ -19,8 +19,8 @@ const Footer = () => {
     // <!-- Footer Section -->
     <div class="px-[37px] md:px-[33px] flex flex-col md:flex-row gap-2 items-center md:justify-between my-[50px] md:my-[90px] bg-white">
         {/* <!-- Navigation Links --> */}
-        <div onClick={scrollNavbar} class="flex gap-2 w-full md:gap-5 items-center text-[15px] md:text-[20px] justify-between md:justify-start">
-            <p class="cursor-pointer md:my-[10px] my-[5px] hover:font-bold transition-all delay-150 hover:scale-95 duration-300">Home</p>
+        <div  class="flex gap-2 w-full md:gap-5 items-center text-[15px] md:text-[20px] justify-between md:justify-start">
+            <p onClick={scrollHome} class="cursor-pointer md:my-[10px] my-[5px] hover:font-bold transition-all delay-150 hover:scale-95 duration-300">Home</p>
             <Link class="cursor-pointer md:my-[10px] my-[5px] hover:font-bold transition-all delay-150 hover:scale-95 duration-300" to={"/project-route"}>Projects</Link>
             <p onClick={scrollToAbout} class="cursor-pointer md:my-[10px] my-[5px] hover:font-bold transition-all delay-150 hover:scale-95 duration-300">About</p>
             <p onClick={scrollToContact} class="cursor-pointer md:my-[10px] my-[5px] hover:font-bold transition-all delay-150 hover:scale-95 duration-300">Contact</p>   

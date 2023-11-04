@@ -16,12 +16,12 @@ const projects = [
     imageUrl: study, // Add your image URL here
     projectLink:'https://studynotion-frontend-sandy.vercel.app/'
   },
-  {
-    title: 'Portfolio',
-    description: 'This portfolio website, built using React and styled with Tailwind CSS, elegantly showcases skills and projects. Its user-friendly design adapts to any device........',
-    imageUrl: port, // Add your image URL here
-    projectLink:'https://e-bay-an-e-commerce-platform1.vercel.app/'
-  },
+  // {
+  //   title: 'Portfolio',
+  //   description: 'This portfolio website, built using React and styled with Tailwind CSS, elegantly showcases skills and projects. Its user-friendly design adapts to any device........',
+  //   imageUrl: port, // Add your image URL here
+  //   projectLink:'https://e-bay-an-e-commerce-platform1.vercel.app/'
+  // },
   {
     title: 'eBay',
     description: 'Developed a MERN stack e-commerce app with user registration, login, and product data retrieval from an external API. Optimized user experience with simplified cart management and real-time total calculation.Integrated a secure database system for efficient storage and retrieval of user and product data.',
@@ -38,7 +38,7 @@ const projects = [
 
 function Projects() {
    // Determine how many slides you want in the slider
-   const numberOfSlides = 4;
+   const numberOfSlides = 3;
 
    // Create an array of project items by repeating the projects
    const projectItems = Array.from({ length: numberOfSlides }, (_, index) => {

@@ -36,9 +36,9 @@ const Navbar = () => {
         {/* Mobile Navigation Links (Hidden by Default) */}
         <div className="md:hidden text-[17px] flex items-center gap-3">
            <AiTwotoneHome />
-           <GoProjectSymlink/>
-           <GiInnerSelf />
-           <IoMdContact/>
+           <Link to={"/project-route"}><GoProjectSymlink/></Link>
+           <p onClick={scrollToAbout} ><GiInnerSelf/></p>
+           <p onClick={scrollToContact}><IoMdContact/></p>
         </div>
       </div>
     </nav>

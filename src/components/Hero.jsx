@@ -1,16 +1,41 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { TypeAnimation } from "react-type-animation";
 
 
 const Hero = () => {
   return (
     // <!-- Hero Section -->
-    <div className="flex flex-col md:flex-row w-full h-auto items-center gap-4 justify-between mx-auto md:mt-[34px] md:px-[55px] bg-[#F0F0F5] rounded-md p-3 overflow-visible">
+    <div id='home-section' className="flex flex-col md:flex-row w-full h-auto items-center gap-4 justify-between mx-auto md:mt-[34px] md:px-[55px] bg-[#F0F0F5] rounded-md p-3 overflow-visible">
         {/* <!-- First Part (Text) --> */}
         <div className="w-auto flex flex-col flex-wrap md:px-[10px] text-center md:text-left font-Poppins">
-            <p className="font-bold text-black md:text-[49px] md:mb-1">Hello,</p>
-            <p className="font-bold text-black md:text-[49px]">I am <span className="font-bold text-[#5E3AEE] md:text-[49px]">Pavan Badgujar.</span></p>
-            <p className="md:text-[29px] text-[#696969] font-semibold">Frontend Developer</p>
+             <p className="font-bold text-black md:text-[49px] md:mb-1">Hello,</p>
+            <p className="font-bold text-black md:text-[49px]">I am  <span className='md:text-2xl text-[8px]  text-[#5E3AEE] font-semibold'>
+              <TypeAnimation
+    preRenderFirstString={true}
+    sequence={[
+      500,
+      'Web Developer...',
+      1000,
+      'Fullstack Developer... ', // initially rendered starting point
+      1000,
+      'Frontend Developer...',
+      1000,
+      'Backend Developer...',
+      1000,
+      'Mernstack Developer...',
+      1000,
+      'Problem Solver...',
+      500,
+    ]}
+    speed={50}
+    style={{ fontSize: '2em' }}
+    repeat={Infinity}
+  />
+                
+              </span></p>
+             {/*<p className="md:text-[29px] text-[#696969] font-semibold">Frontend Developer</p> */}
+             
             <p className="flex flex-wrap text-black font-medium text-[20px] md:mb-[15px]">I specialize in UI Design, Responsive Web Design, and Web development.</p>
             {/* <!-- Contact and Projects Buttons --> */}
             <div className="flex flex-col md:flex-row gap-6">

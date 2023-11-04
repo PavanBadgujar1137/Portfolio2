@@ -21,7 +21,8 @@ const Navbar = () => {
     homeSection.scrollIntoView({behavior:"smooth"})
   }
   return (
-    <nav id='home-section' className="mx-auto w-full flex justify-between my-[26px] items-center font-Poppins mt-[20px]">
+    <nav id='home-section' className="mx-auto w-full flex justify-between my-[26px] items-center font-Poppins mt-[20px]" style={{ boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)' }}
+    >
       {/* Logo and Navigation Links */}
       <div className="text-[15px] md:text-4xl text-[#5E3AEE] font-bold lg:text-5xl">Pavan Badgujar</div>
       <div>
@@ -35,7 +36,7 @@ const Navbar = () => {
         </div>
         {/* Mobile Navigation Links (Hidden by Default) */}
         <div className="md:hidden text-[17px] flex items-center gap-3">
-           <AiTwotoneHome />
+           <p onClick={scrollNavbar}><AiTwotoneHome /></p>
            <Link to={"/project-route"}><GoProjectSymlink/></Link>
            <p onClick={scrollToAbout} ><GiInnerSelf/></p>
            <p onClick={scrollToContact}><IoMdContact/></p>

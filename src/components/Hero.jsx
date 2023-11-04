@@ -1,0 +1,29 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+
+const Hero = () => {
+  return (
+    // <!-- Hero Section -->
+    <div className="flex flex-col md:flex-row w-full h-auto items-center gap-4 justify-between mx-auto md:mt-[34px] md:px-[55px] bg-[#F0F0F5] rounded-md p-3 overflow-visible">
+        {/* <!-- First Part (Text) --> */}
+        <div className="w-auto flex flex-col flex-wrap md:px-[10px] text-center md:text-left font-Poppins">
+            <p className="font-bold text-black md:text-[49px] md:mb-1">Hello,</p>
+            <p className="font-bold text-black md:text-[49px]">I am <span className="font-bold text-[#5E3AEE] md:text-[49px]">Pavan Badgujar.</span></p>
+            <p className="md:text-[29px] text-[#696969] font-semibold">Frontend Developer</p>
+            <p className="flex flex-wrap text-black font-medium text-[20px] md:mb-[15px]">I specialize in UI Design, Responsive Web Design, and Web development.</p>
+            {/* <!-- Contact and Projects Buttons --> */}
+            <div className="flex flex-col md:flex-row gap-6">
+               <a href="https://drive.google.com/file/d/1dbzoqEsZCTcyIc9iDGkxZvr-IHJl63k9/view"><button type="button" className="md:w-[185px] md:h-[50px] text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Resume</button></a> 
+                <Link type="button" className="md:w-[185px] md:h-[50px] text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 " to={"/project-route"}>Projects</Link>
+            </div>
+        </div>
+        {/* <!-- Second Part (Image) --> */}
+        <div className="flex items-center md:w-[434px] md:h-[408px] md:px-[10px]">
+           <img src={require('../images/pavanB.jpeg')} className="rounded-full transition-all duration-75 hover:scale-95 cursor-pointer" alt="self-picture" width="434" height="408"/>
+        </div>
+    </div>
+  )
+}
+
+export default Hero
